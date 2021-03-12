@@ -1,0 +1,611 @@
+4) пакет com.metanit;
+
+ class Main {
+    public static void main (String [] args) {
+        int я = 1;
+        байт b = 1;
+        Строковое значение = «1000»;
+        Целое число iObj = новое целое число (i);
+        Байт bObj = новый байт (б);
+        System.out.println ("while i == b is" +
+                (я == б));
+        System.out.println ("iObj.equals (bObj) is"
+                + iObj.equals (bObj));
+        Long lObj = новый Long (значение);
+        System.out.println ("lObj =" +
+                lObj.toString ());
+        Длинная сумма = новая Длинная (lObj.longValue () +
+                iObj.byteValue () +
+                bObj.shortValue ());
+        System.out.println ("Сумма =" +
+                sum.doubleValue ());
+    }
+}
+
+5) пакет com.metanit;
+public class Test {
+    public static void main (String [] args) {
+        Тест t = новый Тест ();
+        Строка s1 = "Привет, мир !!!";
+        String s2 = "Привет, мир !!!";
+        System.out.println ("Строка одинаково =" +
+                (s1.equals (s2)));
+        System.out.println (
+                «Строки одинаковые =» + (s1 == s2));
+    }
+}
+
+6) пакет com.metanit;
+
+public class Test {
+
+    public static void main (String [] args) {
+        Тест t = новый Тест ();
+        Строка s = "префикс!";
+        System.out.println (s);
+        s = s.trim ();
+        System.out.println (s);
+        s = s.concat («суффикс»);
+        System.out.println (s);
+    }
+} 
+
+7) пакет com.metanit;
+
+public class Test {
+
+    public static void main (String [] args) {
+        Тест t = новый Тест ();
+        Строка s = новая строка ("ssssss");
+        StringBuffer sb =
+                новый StringBuffer ("bbbbbb");
+        s.concat ("- ааа");
+        sb.append ("- ааа");
+        System.out.println (s);
+        System.out.println (сб);
+    }
+}
+
+8) пакет com.metanit;
+
+public class Test {
+
+    public static void main (String [] args) {
+        StringBuffer sb = новый StringBuffer ("abc");
+        Строка str = sb.append ("e"). Вставить (4,
+                «Е»). вставить (3, «г»). нанизывать ();
+        System.out.println (стр.);
+    }
+}
+
+
+9) пакет com.metanit;
+
+public class Test {
+
+    public static void main (String [] args) {
+        Тест t = новый Тест ();
+        StringBuffer sb = новый StringBuffer ("ааа");
+        System.out.println ("До =" + сб);
+        t.doTest (сб);
+        System.out.println ("После =" + сб);
+    }
+    void doTest (StringBuffer theSb) {
+        theSb.append ("- bbb");
+    }
+}
+
+10) пакет com.metanit;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
+
+public class Test {
+
+    public static void main (String [] args) {
+        System.out.println («Изучение Java»);
+        пытаться {
+            PrintStream print = new PrintStream (новый
+                    FileOutputStream ("d: \\ file2.txt"));
+            System.setOut (печать);
+            System.out.println («Хорошо учись»);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace ();
+        }
+    }
+}
+
+ЗАДАНИЕ №2 
+Запустить на выполнение код программ, приведенных в конспекте лекционного занятия «Занятие № 11. Пакет java.util». 
+
+1) пакет com.metanit;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
+ class Main {
+
+    public static void main (String [] args) {
+        SimpleDateFormat sdf = new SimpleDateFormat ("гггг ММММ дд ЧЧ: мм: сс");
+        Календарь cal = Calendar.getInstance ();
+        cal.set (Calendar.YEAR, 2002);
+        cal.set (Calendar.MONTH, Calendar.AUGUST);
+        cal.set (Calendar.DAY_OF_MONTH, 31);
+        System.out.println ("Дата начальной установки:" + sdf.format (cal.getTime ()));
+        cal.set (Calendar.MONTH, Calendar.SEPTEMBER);
+        System.out.println ("Дата с изменением месяца:" + sdf.format (cal.getTime ()));
+        cal.set (Calendar.DAY_OF_MONTH, 30);
+        System.out.println ("Дата с измененным днем:" + sdf.format (cal.getTime ()));
+
+    }
+}
+
+2) пакет com.metanit;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
+ class Main {
+
+     public static void main (String [] args) {
+         SimpleDateFormat sdf = new SimpleDateFormat ("гггг ММММ дд ЧЧ: мм: сс");
+
+         Календарь cal = Calendar.getInstance ();
+         cal.set (Calendar.YEAR, 2002);
+         cal.set (Calendar.MONTH, Calendar.AUGUST);
+         cal.set (Calendar.DAY_OF_MONTH, 31);
+         System.out.println ("Дата начальной установки:" + sdf.format (cal.getTime ()));
+         cal.set (Calendar.MONTH, Calendar.SEPTEMBER);
+         cal.set (Calendar.DAY_OF_MONTH, 30);
+         System.out.println ("Дата с изменением дня и месяца:" + sdf.format (cal.getTime ()));
+     }
+ }
+ 
+ 3) пакет com.metanit;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
+ class Main {
+
+     public static void main (String [] args) {
+         SimpleDateFormat sdf = new SimpleDateFormat ("гггг ММММ дд ЧЧ: мм: сс");
+         Календарь cal = Calendar.getInstance ();
+         cal.set (Calendar.YEAR, 2002);
+         cal.set (Calendar.MONTH, Calendar.AUGUST);
+         cal.set (Calendar.DAY_OF_MONTH, 31);
+         cal.set (Calendar.HOUR_OF_DAY, 19);
+         cal.set (Calendar.MINUTE, 30);
+         cal.set (Календарь.SECOND, 00);
+         System.out.println ("Текущая дата:" + sdf.format (cal.getTime ()));
+         cal.add (Calendar.SECOND, 75);
+         System.out.println ("Текущая дата:" + sdf.format (cal.getTime ()));
+         cal.add (Calendar.MONTH, 1);
+         System.out.println ("Текущая дата:" + sdf.format (cal.getTime ()));
+     }
+ }
+
+4) пакет com.metanit;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
+ class Main {
+
+     public static void main (String [] args) {
+         SimpleDateFormat sdf = new SimpleDateFormat ("гггг ММММ дд ЧЧ: мм: сс");
+         Календарь cal = Calendar.getInstance ();
+         cal.set (Calendar.YEAR, 2002);
+         cal.set (Calendar.MONTH, Calendar.AUGUST);
+         cal.set (Calendar.DAY_OF_MONTH, 31);
+         cal.set (Calendar.HOUR_OF_DAY, 19);
+         cal.set (Calendar.MINUTE, 30);
+         cal.set (Календарь.SECOND, 00);
+         System.out.println ("Текущая дата:" + sdf.format (cal.getTime ()));
+         cal.roll (Calendar.SECOND, 75);
+         System.out.println («Правило 1:» + sdf.format (cal.getTime ()));
+         cal.roll (Календарь.МЕСЯЦ, 1);
+         System.out.println («Правило 2:» + sdf.format (cal.getTime ()));
+     }
+ }
+ 
+ 5) пакет com.metanit;
+
+import java.text.SimpleDateFormat;
+import java.util.Arrays;
+import java.util.Calendar;
+import java.util.TimeZone;
+
+class Main {
+
+     public static void main (String [] args) {
+         Основной тест = новый Main ();
+         Часовой пояс tz = TimeZone.getDefault ();
+         int rawOffset = tz.getRawOffset ();
+         System.out.println ("Текущий часовой пояс" + tz.getDisplayName () + tz.getID () + "\ n \ n");
+         // Отображение всех доступных часовых поясов
+         System.out.println ("Все доступные часовые пояса \ n");
+         Строка [] idArr = tz.getAvailableIDs ();
+         for (int cnt = 0; cnt <idArr.length; cnt ++) {
+             tz = TimeZone.getTimeZone (idArr [cnt]);
+             System.out.println (test.padr (tz.getDisplayName () +
+                     tz.getID (), 64) + "исходное смещение =" + tz.getRawOffset () +
+                     "; смещение часа = (" + tz.getRawOffset () / (1000 * 60 * 60) + ")");
+         }
+         // Отображение всех доступных часовых поясов, как для Москвы
+         System.out.println ("\ n \ n Часовые пояса такие же, как для Москвы \ n");
+         idArr = tz.getAvailableIDs (rawOffset);
+         for (int cnt = 0; cnt <idArr.length; cnt ++) {
+             tz = TimeZone.getTimeZone (idArr [cnt]);
+             System.out.println (test.padr (tz.getDisplayName () +
+                     tz.getID (), 64) + "исходное смещение =" + tz.getRawOffset () +
+                     "; смещение часа = (" + tz.getRawOffset () / (1000 * 60 * 60) + ")");
+         }
+     }
+     String padr (String str, int len) {
+         if (len - str.length ()> 0) {
+             char [] buf = новый символ [len - str.length ()];
+             Arrays.fill (buf, '');
+             return str + новая строка (buf);
+         }еще{
+             вернуть str.substring (0, len);
+         }
+     }
+ }
+ 
+ 6) пакет com.metanit;
+
+import java.util.Calendar;
+import java.util.SimpleTimeZone;
+import java.util.TimeZone;
+
+class Test {
+
+    public Test () {
+    }
+    public static void main (String [] args) {
+        Тестовый тест = новый Тест ();
+        SimpleTimeZone stz = новый SimpleTimeZone (
+                TimeZone.getDefault (). GetRawOffset ()
+                , TimeZone.getDefault (). GetID ()
+                , Calendar.MARCH
+                , -1
+                , Календарь. СУНДУК
+                , test.getTime (2,0,0,0)
+                , Calendar.OCTOBER
+                , -1
+                , Календарь. СУНДУК
+                , test.getTime (3,0,0,0)
+        );
+        System.out.println (stz.toString ());
+    }
+    int getTime (int час, int min, int sec, int ms) {
+        час возврата * 3600000 + мин * 60000 + сек * 1000 + мс;
+    }
+}
+
+7) пакет com.metanit;
+
+import java.text.SimpleDateFormat;
+import java.util.Arrays;
+import java.util.Calendar;
+import java.util.TimeZone;
+
+ class TestObservable расширяет java.util.Observable {
+    частная строка name = "";
+    public TestObservable (String name) {
+        this.name = name;
+    }
+
+    public void modify () {
+        setChanged ();
+    }
+
+    public String getName () {
+        возвращаемое имя;
+    }
+}
+
+ class TestObserver реализует java.util.Observer {
+    частная строка name = "";
+
+    public TestObserver (String name) {
+        this.name = name;
+    }
+    public void update (java.util.Observable o, Object arg) {
+        String str = "Вызывается обновление" + name;
+        str + = "от" + ((TestObservable) o) .getName ();
+        str + = "с аргументом" + (String) arg;
+        System.out.println (стр.);
+    }
+}
+ class Test {
+    public Test () {
+    }
+    public static void main (String [] args) {
+        Тестовый тест = новый Тест ();
+        TestObservable to = новый TestObservable ("Наблюдаемый");
+        TestObserver o1 = новый TestObserver ("Наблюдатель 1");
+        TestObserver o2 = новый TestObserver ("Наблюдатель 2");
+        to.addObserver (o1);
+        to.addObserver (o2);
+        модифицировать();
+        to.notifyObservers («Уведомить аргумент»);
+    }
+}
+
+8) пакет com.metanit;
+
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+
+ class Test {
+    public Test () {
+    }
+    public static void main (String [] args) {
+        Тест t = новый Тест ();
+        ArrayList al = новый ArrayList ();
+        al.add («Первый элемент»);
+        al.add («Второй элемент»);
+        al.add («Третий элемент»);
+        Итератор it = al.iterator ();
+        while (it.hasNext ()) {
+            System.out.println ((Строка) it.next ());
+        }
+        System.out.println ("\ п");
+        al.add (2, «Вставка»);
+        это = al.iterator ();
+        while (it.hasNext ()) {
+            System.out.println ((Строка) it.next ());
+        }
+    }
+}
+
+
+9) пакет com.metanit;
+
+import java.util.Iterator;
+import java.util.LinkedList;
+
+class Test {
+    public Test () {
+    }
+    public static void main (String [] args) {
+        Тестовый тест = новый Тест ();
+        LinkedList ll = новый LinkedList ();
+        ll.add («Элемент1»);
+        ll.addFirst («Элемент2»);
+        ll.addFirst («Элемент3»);
+        ll.addLast ("Элемент4");
+        test.dumpList (ll);
+        ll.remove (2);
+        test.dumpList (ll);
+        Строковый элемент = (Строка) ll.getLast ();
+        ll.remove (элемент);
+        test.dumpList (ll);
+    }
+    private void dumpList (список LinkedList) {
+        Итератор it = list.iterator ();
+        System.out.println ();
+        while (it.hasNext ()) {
+            System.out.println ((Строка) it.next ());
+        }
+    }
+}
+
+
+10) пакет com.metanit;
+
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+
+ class Test {
+    частный класс TestObject {
+        Текст строки = "";
+        public TestObject (текст строки) {
+            this.text = текст;
+        };
+        public String getText () {
+            вернуть this.text;
+        }
+        public void setText (текст строки) {
+            this.text = текст;
+        }
+    }
+    public Test () {
+    }
+    public static void main (String [] args) {
+        Тест t = новый Тест ();
+        TestObject to = null;
+        HashMap hm = новая HashMap ();
+        hm.put ("Ключ1", t.new TestObject ("Значение 1"));
+        hm.put ("Ключ2", ​​t.new TestObject ("Значение 2"));
+        hm.put ("Ключ3", t.new TestObject ("Значение 3"));
+        to = (TestObject) hm.get ("Key1");
+        System.out.println ("Значение объекта для Key1 =" + to.getText () + "\ n");
+        System.out.println («Итерация над набором записей»);
+        Map.Entry entry = null;
+        Итератор it = hm.entrySet (). Iterator ();
+        // Итератор для перебора всех точек входа в Карта
+        while (((Iterator <?>) it) .hasNext ()) {
+            entry = (Map.Entry) it.next ();
+            System.out.println ("For key =" + entry.getKey () +
+                    "значение =" + ((TestObject) entry.getValue ()). getText ());
+        }
+        System.out.println ();
+        System.out.println («Итерация по keySet»);
+        Строковый ключ = "";
+        // Итератор для перебора всех ключей в Карта
+        it = hm.keySet (). iterator ();
+        while (it.hasNext ()) {
+            ключ = (Строка) it.next ();
+            System.out.println ("For key =" + key + "value =" +
+                    ((TestObject) hm.get (ключ)). GetText ());
+        }
+    }
+}
+
+11) пакет com.metanit;
+
+
+
+import java.util.TreeMap;
+
+class Test {
+
+    public Test () {
+    }
+    public static void main (String [] args) {
+        Тест t = новый Тест ();
+        TreeMap tm = новая TreeMap ();
+        tm.put («ключ», «String1»);
+        System.out.println (tm.get ("ключ"));
+        tm.put ("ключ", "String2");
+        System.out.println (tm.get ("ключ"));
+    }
+}
+
+12) 
+
+
+13) пакет com.metanit;
+
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.StringWriter;
+import java.util.Properties;
+
+ class Test {
+    public Test () {
+    }
+    public static void main (String [] args) {
+        Тестовый тест = новый Тест ();
+        Свойства props = новые свойства ();
+        StringWriter sw = новый StringWriter ();
+        sw.write ("Ключ1 = Значение1 \ n");
+        sw.write ("Ключ2: Значение2 \ r \ n");
+        sw.write ("Key3 Value3 \ n");
+        InputStream = новый ByteArrayInputStream (sw.toString (). GetBytes ());
+
+        пытаться {
+            props.load (есть);
+        }
+        catch (IOException ex) {
+            например printStackTrace ();
+        }
+        props.list (System.out);
+        props.setProperty («Ключ1», «Измененное значение1»);
+        props.setProperty («Ключ4», «Добавленное значение4»);
+        props.list (System.out);
+    }
+}
+
+
+14) пакет com.metanit;
+
+import java.util.StringTokenizer;
+
+ class Test {
+
+    public Test () {
+    }
+    public static void main (String [] args) {
+        Тестовый тест = новый Тест ();
+        Строка toParse =
+                "слово1; слово2; слово3; слово4";
+        StringTokenizer st =
+                новый StringTokenizer (toParse, ";");
+        while (st.hasMoreTokens ()) {
+            System.out.println (st.nextToken ());
+        }
+    }
+}
+
+15) пакет com.metanit;
+
+import java.util.BitSet;
+
+ class Test {
+
+    public Test () {
+    }
+    public static void main (String [] args) {
+        Тестовый тест = новый Тест ();
+        BitSet bs1 = новый BitSet ();
+        BitSet bs2 = новый BitSet ();
+        bs1.set (0);
+        bs1.set (2);
+        bs1.set (4);
+        System.out.println ("Длина =" +
+                bs1.length () + "размер =" + bs1.size ());
+        System.out.println (bs1);
+        bs2.set (1);
+        bs2.set (2);
+        bs1.and (bs2);
+        System.out.println (bs1);
+    }
+}
+
+16) пакет com.metanit;
+
+import java.util.Random;
+
+class Test {
+    public Test () {
+    }
+    public static void main (String [] args) {
+        Тестовый тест = новый Тест ();
+        Случайный r = новый Случайный (100);
+        // Генерация одинаковых порядковых номеров
+        for (int cnt = 0; cnt <9; cnt ++) {
+            System.out.print (r.nextInt () + "");
+        }
+        System.out.println ();
+        r = новый случайный (100);
+        for (int cnt = 0; cnt <9; cnt ++) {
+            System.out.print (r.nextInt () + "");
+        }
+        System.out.println ();
+        // Генерация последовательности байтов
+        byte [] randArray = новый байт [8];
+        r.nextBytes (randArray);
+        test.dumpArray (randArray);
+    }
+    void dumpArray (byte [] arr) {
+        for (int cnt = 0; cnt <arr.length; cnt ++) {
+            System.out.print (arr [cnt]);
+        }
+        System.out.println ();
+    }
+}
+
+
+17) пакет com.metanit;
+
+import java.util.Locale;
+
+class Test {
+    public Test () {
+    }
+    public static void main (String [] args) {
+        Тестовый тест = новый Тест ();
+        Локаль l = Locale.getDefault ();
+        System.out.println (l.getCountry () + "" +
+                l.getDisplayCountry () + "" + l.getISO3Country ());
+        System.out.println (l.getLanguage () + "" +
+                l.getDisplayLanguage () + "" + l.getISO3Language ());
+        System.out.println (l.getVariant () + "" + l.getDisplayVariant ());
+        l = новый языковой стандарт («ru», «RU», «ОКНА»);
+        System.out.println (l.getCountry () + "" +
+                l.getDisplayCountry () + "" + l.getISO3Country ());
+        System.out.println (l.getLanguage () + "" +
+                l.getDisplayLanguage () + "" + l.getISO3Language ());
+        System.out.println (l.getVariant () + "" + l.getDisplayVariant ());
+    }
+}
